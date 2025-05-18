@@ -1,0 +1,79 @@
+// Css chung
+
+.heading {
+    font-family: var(--heading-font);
+    font-size: 4.2rem;
+    font-weight: 700;
+    line-height: 5.2rem;
+    color: #0e1412;
+}
+
+.sub-heading {
+    font-family: var(--heading-font);
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 30px;
+    color: #0e1412;
+}
+
+.paragraph {
+    font-family: var(--paragraph-font);
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 3rem;
+    color: #0e1412;
+}
+
+.section-1-about {
+    display: flex;
+    background-color: var(--yellow-light);
+
+    .box-area {
+        max-width: 670px;
+        text-align: center;
+        margin-top: 73px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .heading {
+        line-height: 7rem;
+        font-weight: 800;
+        font-size: 6rem;
+    }
+
+    .paragraph {
+        margin-bottom: 100px;
+    }
+}
+
+.section-2-about {
+    background-color: #fff;
+
+    .container {
+        margin-top: 150px;
+    }
+
+    .box-area {
+        display: flex;
+        flex-direction: column;
+    }
+    .sub-heading {
+        color: var(--grey);
+    }
+
+    .paragraph {
+        color: var(--grey);
+        max-width: 470px;
+    }
+
+    .right-section {
+        position: relative;
+    }
+
+    .mask {
+        position: absolute;
+        top: 50%;
+        left: -60px;
+    }
+}

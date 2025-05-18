@@ -1,0 +1,20 @@
+$grid-breakpoints: (
+    xxl: 1400px,
+    xl: 1200px,
+    lg: 992px,
+    md: 768px,
+    sm: 576px,
+);
+
+:root {
+    --paragraph-font: "Manrope", sans-serif;
+    --heading-font: "Roboto Slab", serif;
+
+    --white: #fff;
+    --orange: #fd6038;
+    --yellow: #fed464;
+    --green: #017848;
+    --dark: #0e1412;
+    --grey: #586863;
+    --yellow-light: #f8ebc9;
+}

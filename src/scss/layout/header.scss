@@ -1,0 +1,97 @@
+@use "/scss/_mixins.scss";
+
+.header {
+    background-color: var(--yellow-light);
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 67px;
+    margin-top: 30px;
+    // padding: 0 15px;
+
+    li {
+        list-style: none;
+    }
+
+    nav {
+        margin-left: 100px;
+    }
+
+    nav > ul {
+        display: flex;
+        gap: 62px;
+    }
+    .nav {
+        position: relative;
+    }
+
+    .nav a {
+        font-family: var(--paragraph-font), sans-serif;
+        font-weight: 400;
+        font-size: 1.6rem;
+        text-decoration: none;
+        line-height: 67px;
+        padding: 10px 3px;
+    }
+
+    .nav:hover > a,
+    .nav:hover > i {
+        color: var(--orange);
+    }
+
+    .nav:hover > i {
+        rotate: 180deg;
+    }
+
+    .nav:hover .sub-nav {
+        display: block;
+    }
+
+    .sub-nav li:hover a,
+    .sub-nav li:hover i {
+        color: #fd6038;
+    }
+
+    .sub-nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 12px 12px;
+        background-color: #fff;
+        min-width: 185px;
+    }
+
+    .sub-nav > li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .sub-nav a {
+        line-height: 3.2rem;
+        padding: 2px 12px;
+        width: 100%;
+        text-align: start;
+    }
+
+    span {
+        font-size: 1.6rem;
+    }
+
+    .user-action a {
+        font-family: var(--paragraph-font), sans-serif;
+        line-height: 67px;
+        font-size: 2.2rem;
+        font-weight: 700;
+    }
+
+    // @include mixins.screen(xl) {
+    //     background-color: #000;
+    // }
+}
