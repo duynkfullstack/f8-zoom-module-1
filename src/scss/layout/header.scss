@@ -1,5 +1,13 @@
 @use "/scss/_mixins.scss";
 
+.wrapper-header {
+    display: flex;
+    min-height: 127px;
+    background-color: var(--yellow-light);
+}
+
+
+
 .header {
     background-color: var(--yellow-light);
     display: flex;

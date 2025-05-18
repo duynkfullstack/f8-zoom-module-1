@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="wrapper-header">
+                <div class="container">
+                    <%- include("./partials/header.ejs") %>
+                </div>
+            </div>
+
+            <div class="main-contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-7">
+                            <div class="box-area">
+                                <h1 class="heading">
+                                    Contact With Justice Law Firm
+                                </h1>
+                                <p class="paragraph">
+                                    At The Justice Law Firm, our clients are our
+                                    top priority. Fueled by passion and
+                                    determination, we have a reputation for
+                                    legal excellence in North Carolina. Our firm
+                                    was established in 1907 and we’ve been
+                                    delivering best.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form action="#">
+                        <div class="row gy-3 row-cols-2">
+                            <div class="col">
+                                <div class="item">
+                                    <label>
+                                        <span>Name</span>
+                                        <input
+                                            type="text"
+                                            placeholder="Your first name"
+                                            name="name"
+                                            class="input-name"
+                                            required
+                                            autocomplete="off"
+                                        />
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="item">
+                                    <label>
+                                        <span>Name</span>
+                                        <input
+                                            type="text"
+                                            placeholder="Your last name"
+                                            name="name"
+                                            class="input-name"
+                                            required
+                                            autocomplete="off"
+                                        />
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="item">
+                                    <label>
+                                        <span>Phone</span>
+                                        <input
+                                            type="text"
+                                            placeholder="Your phone here"
+                                            name="name"
+                                            class="input-name"
+                                            required
+                                            autocomplete="off"
+                                        />
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="item">
+                                    <label>
+                                        <span>Email</span>
+                                        <input
+                                            type="text"
+                                            placeholder="Your email here"
+                                            name="name"
+                                            class="input-name"
+                                            required
+                                            autocomplete="off"
+                                        />
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="item item-action">
+                                    <label>
+                                        <span>Service</span>
+                                        <input
+                                            type="text"
+                                            placeholder="Practice Area"
+                                            name="name"
+                                            class="input-name"
+                                            required
+                                            autocomplete="off"
+                                        />
+                                    </label>
+                                    <i
+                                        class="fa-solid fa-angle-down arrow-down"
+                                    ></i>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="item item-action">
+                                    <label>
+                                        <span>Lawyer</span>
+                                        <input
+                                            type="text"
+                                            placeholder="Specific Attorney"
+                                            name="name"
+                                            class="input-name"
+                                            required
+                                            autocomplete="off"
+                                        />
+                                    </label>
+                                    <i
+                                        class="fa-solid fa-angle-down arrow-down"
+                                    ></i>
+                                </div>
+                            </div>
+
+                            <div class="col col-12">
+                                <div class="item">
+                                    <label>
+                                        <span>Message</span>
+                                        <!-- <input
+                                            type="text"
+                                            placeholder="Your first name"
+                                            name="name"
+                                            class="input-name message"
+                                            required
+                                            autocomplete="off"
+                                        /> -->
+                                        <textarea
+                                            name="message"
+                                            class="message"
+                                            placeholder="Write your messages"
+                                        ></textarea>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col offset-10 col-2">
+                                <div class="btn">
+                                    <a href="#">Send Message</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <%- include("./partials/footer.ejs") %>
+        </div>
+        <script type="module" src="./main.js"></script>
+    </body>
+</html>

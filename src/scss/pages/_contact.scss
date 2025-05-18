@@ -1,0 +1,52 @@
+.main-contact {
+    .box-area {
+        display: flex;
+        margin-top: 100px;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    form {
+        margin-top: 38px;
+    }
+    .item label {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        justify-content: flex-start;
+    }
+
+    .item span {
+        font-family: var(--paragraph-font), serif;
+        color: var(--dark);
+        font-size: 1.8rem;
+        font-weight: 600;
+        line-height: 3rem;
+    }
+
+    .item input {
+        outline: none;
+        padding: 20px;
+        border: 1px solid #beccc7;
+        font-size: 1.6rem;
+    }
+
+    .item-action {
+        position: relative;
+    }
+    .arrow-down {
+        position: absolute;
+        bottom: 23px;
+        right: 20px;
+        font-size: 1.6rem;
+        color: var(--dark);
+    }
+
+    .message {
+        min-height: 330px;
+        outline: none;
+        padding: 20px;
+        border: 1px solid #beccc7;
+        font-size: 1.6rem;
+    }
+}

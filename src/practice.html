@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="section-1-practice">
+                <div class="container">
+                    <%- include("./partials/header.ejs") %>
+                    <div class="box-area">
+                        <h3 class="sub-heading">#Practice Areas</h3>
+                        <h2 class="heading">Our Practice Areas to Serve You</h2>
+                        <p class="paragraph">
+                            Where every injury is personal. We are a different
+                            kind of law firm. Let our small, passionate group of
+                            trial lawyers fight for your rights!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main">
+                <!-- section 2 -->
+                <section class="section-2-practice">
+                    <div class="container">
+                        <div class="box-area">
+                            <h3 class="sub-heading">#Services</h3>
+                            <h2 class="heading">Our Practice Areas</h2>
+                            <p class="paragraph">
+                                Our Law Office provides a professional
+                                experience for all our clients, helping them
+                                navigate their legal rights.
+                            </p>
+                        </div>
+
+                        <div class="list-items">
+                            <div class="row gy-3">
+                                <div class="col">
+                                    <div class="box-item box-item-1">
+                                        <a class="active">
+                                            Personal Injury Law
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="box-item box-item-2">
+                                        <a class="active"> Employment Law </a>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="box-item box-item-3">
+                                        <a class="active"> Immigration Law </a>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="box-item box-item-4">
+                                        <a class="active">Family Law</a>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="box-item box-item-5">
+                                        <a class="active">Divorce Law</a>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="box-item box-item-6">
+                                        <a class="active"> Property Law </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- section 3 -->
+                <section class="section-3-practice">
+                    <div class="container">
+                        <div class="box-area">
+                            <h3 class="sub-heading">#CTA</h3>
+                            <h2 class="heading">Dealing With a Issue?</h2>
+                            <p class="paragraph">
+                                Where every injury is personal. We are a
+                                different kind of law firm. Let our small,
+                                passionate group of trial lawyers fight for your
+                                rights!
+                            </p>
+                            <div class="btn">
+                                <a href="#"> Get a Consultations </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <footer><%- include("./partials/footer.ejs") %></footer>
+        </div>
+
+        <script type="module" src="./main.js"></script>
+    </body>
+</html>
