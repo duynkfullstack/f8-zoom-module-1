@@ -29,49 +29,52 @@
     .container {
         margin-top: 53px;
     }
-}
 
-.left-section-1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: start;
-    gap: 18px;
-
-    *:not(h1) {
-        font-family: var(--paragraph-font), serif;
-        text-align: start;
-        font-size: 1.8rem;
-        font-weight: 400;
-        line-height: 30px;
+    .section-1 {
+        margin-top: 150px;
     }
+    .left-section-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: start;
+        gap: 18px;
 
-    h1 {
-        font-family: var(--heading-font), serif;
-        font-size: 6rem;
-        font-weight: 800;
-        line-height: 70px;
-    }
+        *:not(h1) {
+            font-family: var(--paragraph-font), serif;
+            text-align: start;
+            font-size: 1.8rem;
+            font-weight: 400;
+            line-height: 30px;
+        }
 
-    .paragraph {
-        max-width: 470px;
-    }
+        h1 {
+            font-family: var(--heading-font), serif;
+            font-size: 6rem;
+            font-weight: 800;
+            line-height: 70px;
+        }
 
-    .btn {
-        border: 1px solid #ccc;
-        background-color: #fd6038;
-        margin-top: 20px;
-    }
+        .paragraph {
+            max-width: 470px;
+        }
 
-    .btn a {
-        display: inline-block;
-        font-family: var(--paragraph-font), serif;
-        text-decoration: none;
-        color: #fff;
-        font-weight: 600;
-        font-size: 1.8rem;
-        line-height: 30px;
-        padding: 15px 35px;
+        .btn {
+            border: 1px solid #ccc;
+            background-color: #fd6038;
+            margin-top: 20px;
+        }
+
+        .btn a {
+            display: inline-block;
+            font-family: var(--paragraph-font), serif;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1.8rem;
+            line-height: 30px;
+            padding: 15px 35px;
+        }
     }
 }
 

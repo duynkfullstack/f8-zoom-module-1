@@ -22,7 +22,7 @@ export default defineConfig({
             input: {
                 index: path.resolve(__dirname, "src/index.html"),
                 about: path.resolve(__dirname, "src/about.html"),
-                practice: path.resolve(__dirname, "src/practice.html"),
+                // practice: path.resolve(__dirname, "src/practice.html"),
                 // Thêm trang ở đây
             },
         },
