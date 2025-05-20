@@ -1,4 +1,9 @@
+@use "/scss/_mixins.scss";
+
 .main-contact {
+    .container {
+        margin-bottom: 20px;
+    }
     .box-area {
         display: flex;
         margin-top: 100px;
@@ -48,5 +53,74 @@
         padding: 20px;
         border: 1px solid #beccc7;
         font-size: 1.6rem;
+    }
+    .btn {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .btn a {
+        padding: 15px 20px;
+        text-decoration: none;
+        font-family: var(--paragraph-font);
+        color: #fff;
+        background-color: var(--orange);
+        font-size: 1.8rem;
+        line-height: 3rem;
+    }
+
+    @include mixins.screen(xl) {
+        .heading {
+            font-size: 3.8rem;
+            line-height: 4.5rem;
+        }
+
+        .paragraph {
+        }
+    }
+
+    @include mixins.screen(lg) {
+        .heading {
+            font-size: 3.5rem;
+            line-height: 4rem;
+        }
+
+        .paragraph {
+            font-size: 1.6rem;
+            line-height: 2.5rem;
+        }
+
+        .btn a {
+            padding: 12px 15px;
+        }
+    }
+
+    @include mixins.screen(md) {
+        .heading {
+            font-size: 3rem;
+            line-height: 3.6rem;
+        }
+
+        .paragraph {
+            font-size: 1.4rem;
+            line-height: 2rem;
+        }
+
+        .btn {
+            justify-content: center;
+        }
+    }
+
+    @include mixins.screen(sm) {
+        .heading {
+            font-size: 2.1rem;
+            line-height: 2.6rem;
+        }
+
+        .paragraph {
+            font-size: 1rem;
+            line-height: 1.6rem;
+        }
     }
 }

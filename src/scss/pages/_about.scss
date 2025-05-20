@@ -1,5 +1,5 @@
+@use "/scss/_mixins.scss";
 // Css chung
-
 .section-1-about {
     display: flex;
     background-color: var(--yellow-light);
@@ -20,6 +20,46 @@
 
     .paragraph {
         margin-bottom: 100px;
+    }
+
+    @include mixins.screen(xl) {
+        .left-section-1 h1 {
+            font-size: 4.3rem;
+            line-height: 5rem;
+        }
+        .left-section-1 .paragraph {
+            font-size: 1.6rem;
+        }
+
+        .left-section-1 .btn a {
+            font-size: 1.6rem;
+            padding: 15px 30px;
+        }
+    }
+
+    // Responsive
+
+    @include mixins.screen(lg) {
+        .heading {
+            font-size: 3.5rem;
+        }
+        .sub-heading,
+        .paragraph {
+            font-size: 1.6rem;
+        }
+    }
+
+    @include mixins.screen(md) {
+        .heading {
+            font-size: 3rem;
+        }
+        .sub-heading,
+        .paragraph {
+            font-size: 1.5rem;
+        }
+    }
+
+    @include mixins.screen(sm) {
     }
 }
 
@@ -47,6 +87,10 @@
         position: relative;
     }
 
+    .right-section img:not(.mask) {
+        width: 100%;
+    }
+
     .mask {
         position: absolute;
         top: 50%;
@@ -60,6 +104,45 @@
         position: absolute;
         top: 0;
         right: 0;
+    }
+
+    @include mixins.screen(xl) {
+        .heading {
+            font-size: 3.5rem;
+        }
+        .sub-heading,
+        .paragraph {
+            font-size: 1.6rem;
+        }
+    }
+
+    @include mixins.screen(lg) {
+        .heading {
+            font-size: 2rem;
+            line-height: 3rem;
+        }
+        .sub-heading,
+        .paragraph {
+            font-size: 1.4rem;
+            line-height: 2.2rem;
+        }
+    }
+
+    @include mixins.screen(md) {
+        .heading {
+            font-size: 2rem;
+            line-height: 3rem;
+        }
+        .sub-heading,
+        .paragraph {
+            font-size: 1.5rem;
+        }
+        .right-section {
+            margin-top: 20px;
+        }
+    }
+
+    @include mixins.screen(sm) {
     }
 }
 
@@ -86,12 +169,48 @@
 
     .box-img {
         margin-top: 70px;
+        text-align: center;
+    }
+
+    .banner {
+        width: 100%;
     }
 
     svg {
         margin-top: 55px;
-        margin-left: 50%;
-        transform: translateX(-50%);
+    }
+
+    @include mixins.screen(xl) {
+        .heading {
+            font-size: 3.5rem;
+        }
+        .sub-heading,
+        .paragraph {
+            font-size: 1.6rem;
+        }
+    }
+
+    @include mixins.screen(lg) {
+        .heading {
+            font-size: 3.5rem;
+        }
+        .sub-heading,
+        .paragraph {
+            font-size: 1.6rem;
+        }
+    }
+
+    @include mixins.screen(md) {
+        .heading {
+            font-size: 3rem;
+        }
+        .sub-heading,
+        .paragraph {
+            font-size: 1.5rem;
+        }
+    }
+
+    @include mixins.screen(sm) {
     }
 }
 
@@ -99,19 +218,21 @@
 .count-down {
     margin-top: 70px;
     .container {
-        background-color: var(--yellow-light);
+        background-color: var(--yellow);
     }
 
-    .items {
-        display: flex;
-        gap: 100px;
-        padding: 55px 0;
-    }
+    // .items {
+    //     display: flex;
+    //     gap: 100px;
+    //
+    //     justify-content: center;
+    // }
 
     .item {
         display: flex;
         flex-direction: column;
         text-align: center;
+        padding: 55px 0;
     }
 
     .number {
@@ -128,6 +249,35 @@
         font-size: 1.6rem;
         font-weight: 400;
         line-height: 2.8rem;
+    }
+
+    @include mixins.screen(xl) {
+    }
+
+    @include mixins.screen(lg) {
+        .number {
+            font-size: 4rem;
+            line-height: 5rem;
+        }
+
+        .text {
+            font-size: 1.4rem;
+        }
+    }
+
+    @include mixins.screen(md) {
+        .number {
+            font-size: 6rem;
+            line-height: 7rem;
+        }
+
+        .text {
+            font-size: 1.8rem;
+            line-height: 3rem;
+        }
+    }
+
+    @include mixins.screen(sm) {
     }
 }
 
@@ -158,12 +308,51 @@
         position: relative;
     }
 
+    .banner {
+        width: 100%;
+    }
+
     .play {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translateX(-50%);
         transform: translateY(-50%);
+    }
+
+    // responsive
+    @include mixins.screen(xl) {
+    }
+
+    @include mixins.screen(lg) {
+        .box-area {
+            margin-top: 100px;
+        }
+        .heading {
+            font-size: 3.5rem;
+        }
+
+        .sub-heading,
+        .paragraph {
+            font-size: 1.6rem;
+        }
+    }
+
+    @include mixins.screen(md) {
+        .box-area {
+            margin-top: 50px;
+        }
+        .heading {
+            font-size: 3rem;
+        }
+
+        .sub-heading,
+        .paragraph {
+            font-size: 1.4rem;
+        }
+    }
+
+    @include mixins.screen(sm) {
     }
 }
 
@@ -204,6 +393,10 @@
         background-size: 100%;
         background-position: center;
         background-repeat: no-repeat;
+    }
+
+    .box-item img {
+        width: 100%;
     }
 
     .box-item {
@@ -261,6 +454,37 @@
         font-weight: 400;
         line-height: 2.8rem;
     }
+    // responsive
+    @include mixins.screen(xl) {
+    }
+
+    @include mixins.screen(lg) {
+        .heading {
+            font-size: 3.5rem;
+        }
+
+        .sub-heading,
+        .paragraph {
+            font-size: 1.6rem;
+        }
+    }
+
+    @include mixins.screen(md) {
+        .container {
+            margin-top: 100px;
+        }
+        .heading {
+            font-size: 3rem;
+        }
+
+        .sub-heading,
+        .paragraph {
+            font-size: 1.4rem;
+        }
+    }
+
+    @include mixins.screen(sm) {
+    }
 }
 
 .section-7-about {
@@ -285,17 +509,69 @@
         color: #0e1412;
     }
 
+    .images {
+        margin-bottom: 100px;
+    }
+
     .box-img {
         text-align: center;
         background-color: #fff;
-        width: 270px;
-        height: 270px;
-        margin-bottom: 100px;
+        width: 100%;
     }
 
     img {
         margin-top: 50%;
-        transform: translateY(-50%);
+        transform: translateY(-75%);
+    }
+
+    // responsive
+    @include mixins.screen(xl) {
+        img {
+            transform: translateY(-60%);
+        }
+    }
+
+    @include mixins.screen(lg) {
+        .heading {
+            font-size: 3.5rem;
+        }
+
+        .sub-heading,
+        .paragraph {
+            font-size: 1.6rem;
+        }
+
+        .box-img {
+            width: 100%;
+        }
+        img {
+            transform: translateY(-80%);
+        }
+    }
+
+    @include mixins.screen(md) {
+        .heading {
+            font-size: 3rem;
+        }
+
+        .sub-heading,
+        .paragraph {
+            font-size: 1.4rem;
+        }
+        img {
+            transform: translateY(-60%);
+        }
+    }
+
+    @include mixins.screen(sm) {
+        .box-img {
+            width: 80%;
+            margin: auto;
+        }
+
+        img {
+            transform: translateY(-100%);
+        }
     }
 }
 
@@ -344,5 +620,42 @@
         text-decoration: none;
         padding: 15px 35px;
         background-color: #fd6038;
+    }
+
+    // responsive
+    @include mixins.screen(xl) {
+    }
+
+    @include mixins.screen(lg) {
+        .heading {
+            font-size: 3.5rem;
+        }
+
+        .sub-heading,
+        .paragraph {
+            font-size: 1.6rem;
+        }
+
+        .box-area {
+            gap: 13px;
+        }
+    }
+
+    @include mixins.screen(md) {
+        .heading {
+            font-size: 3rem;
+        }
+
+        .sub-heading,
+        .paragraph {
+            font-size: 1.4rem;
+        }
+
+        .box-area {
+            gap: 5px;
+        }
+    }
+
+    @include mixins.screen(sm) {
     }
 }

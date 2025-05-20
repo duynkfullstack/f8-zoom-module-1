@@ -1,10 +1,9 @@
+@use "/scss/_mixins.scss";
 .footer {
     background-color: #0e1412;
     display: flex;
     .main {
-        display: flex;
-        margin-top: 100px;
-        justify-content: space-between;
+        margin-top: 40px;
     }
 
     .list-items {
@@ -35,6 +34,7 @@
 
     li {
         list-style: none;
+        cursor: pointer;
     }
 
     .items li:hover > a {
@@ -52,6 +52,12 @@
         font-size: 1.6rem;
         line-height: 2.8rem;
         color: #beccc7;
+    }
+
+    .map {
+        width: 100%;
+        height: 268px;
+        overflow: hidden;
     }
 
     .other {
@@ -83,5 +89,62 @@
 
     .other li:hover > a {
         background-color: #fd6038;
+    }
+
+    // responsive
+    @include mixins.screen(xl) {
+        .list-items {
+            gap: 30px;
+        }
+    }
+
+    @include mixins.screen(lg) {
+        .title {
+            font-size: 1.8rem;
+        }
+        a,
+        span {
+            font-size: 1.4rem;
+        }
+
+        .list-items {
+            gap: 20px;
+        }
+
+        .items ul {
+            gap: 10px;
+        }
+    }
+
+    @include mixins.screen(md) {
+        .title {
+            font-size: 1.6rem;
+        }
+        a,
+        span {
+            font-size: 1.2rem;
+        }
+
+        .items {
+            flex-basis: 30%;
+        }
+    }
+
+    @include mixins.screen(sm) {
+        .main {
+            margin-top: 20px;
+        }
+        .list-items {
+            flex-direction: column;
+        }
+
+        .other {
+            flex-direction: column;
+            margin-top: 20px;
+        }
+        .other ul {
+            position: relative;
+            margin-top: 20px;
+        }
     }
 }

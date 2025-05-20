@@ -6,8 +6,6 @@
     background-color: var(--yellow-light);
 }
 
-
-
 .header {
     background-color: var(--yellow-light);
     display: flex;
@@ -17,7 +15,13 @@
     margin-right: auto;
     height: 67px;
     margin-top: 30px;
+    align-items: center;
     // padding: 0 15px;
+
+    .humburger {
+        font-size: 1.8rem;
+        display: none;
+    }
 
     li {
         list-style: none;
@@ -54,7 +58,8 @@
     }
 
     .nav:hover .sub-nav {
-        display: block;
+        opacity: 1;
+        visibility: visible;
     }
 
     .sub-nav li:hover a,
@@ -63,7 +68,6 @@
     }
 
     .sub-nav {
-        display: none;
         position: absolute;
         top: 60px;
         left: 50%;
@@ -71,6 +75,9 @@
         padding: 12px 12px;
         background-color: #fff;
         min-width: 185px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity ease 0.3s, visibility ease 0.3s, height ease 0.3s;
     }
 
     .sub-nav > li {
@@ -97,9 +104,53 @@
         line-height: 67px;
         font-size: 2.2rem;
         font-weight: 700;
+        text-decoration: none;
     }
 
-    // @include mixins.screen(xl) {
-    //     background-color: #000;
-    // }
+    // responsive header
+
+    @include mixins.screen(xl) {
+        nav {
+            margin-left: 60px;
+        }
+        nav > ul {
+            gap: 20px;
+        }
+    }
+
+    @include mixins.screen(lg) {
+        nav {
+            margin-left: 10px;
+        }
+        nav > ul {
+            gap: 5px;
+        }
+
+        .user-action a {
+            font-size: 1.5rem;
+        }
+    }
+
+    @include mixins.screen(md) {
+        .humburger {
+            display: block;
+        }
+
+        nav {
+            display: none;
+        }
+        .logo {
+            display: none;
+        }
+
+        .user-action a {
+            font-size: 1.2rem;
+        }
+    }
+
+    @include mixins.screen(sm) {
+        .user-action a {
+            font-size: 1.2rem;
+        }
+    }
 }

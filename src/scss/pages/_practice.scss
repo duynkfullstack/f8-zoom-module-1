@@ -1,3 +1,5 @@
+@use "/scss/_mixins.scss";
+
 .section-1-practice {
     display: flex;
     background-color: var(--yellow-light);
@@ -19,6 +21,46 @@
     .paragraph {
         margin-bottom: 100px;
     }
+
+    @include mixins.screen(xl) {
+        .left-section-1 h1 {
+            font-size: 4.3rem;
+            line-height: 5rem;
+        }
+        .left-section-1 .paragraph {
+            font-size: 1.6rem;
+        }
+
+        .left-section-1 .btn a {
+            font-size: 1.6rem;
+            padding: 15px 30px;
+        }
+    }
+
+    // Responsive
+
+    @include mixins.screen(lg) {
+        .heading {
+            font-size: 3.5rem;
+        }
+        .sub-heading,
+        .paragraph {
+            font-size: 1.6rem;
+        }
+    }
+
+    @include mixins.screen(md) {
+        .heading {
+            font-size: 3rem;
+        }
+        .sub-heading,
+        .paragraph {
+            font-size: 1.5rem;
+        }
+    }
+
+    @include mixins.screen(sm) {
+    }
 }
 
 .section-2-practice {
@@ -26,7 +68,6 @@
         margin-top: 150px;
     }
     .box-area {
-        max-width: 470px;
         text-align: center;
         margin-left: auto;
         margin-right: auto;
@@ -55,6 +96,7 @@
         background-repeat: no-repeat;
         width: 370px;
         height: 370px;
+        width: 100%;
     }
 
     .box-item-1 {
@@ -107,12 +149,77 @@
         cursor: pointer;
         transition: background-color ease 0.3s, color ease 0.3s;
     }
+
+    .btn {
+        margin-top: 55px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .btn a {
+        font-family: var(--paragraph-font);
+        color: #fff;
+        font-size: 1.8rem;
+        background-color: #fd6038;
+        font-weight: 600;
+        line-height: 3rem;
+        padding: 15px 35px;
+        text-decoration: none;
+    }
+
+    // Responsive
+
+    @include mixins.screen(xl) {
+        .box-item a {
+            font-size: 2rem;
+            line-height: 2.8rem;
+            padding: 15px 25px;
+            bottom: 60px;
+        }
+    }
+
+    @include mixins.screen(lg) {
+        .heading {
+            font-size: 2rem;
+            line-height: 3rem;
+        }
+        .paragraph,
+        .sub-heading {
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+        }
+    }
+
+    @include mixins.screen(md) {
+        .container {
+            margin-top: 100px;
+        }
+        .box-item a {
+            font-size: 1.8rem;
+            line-height: 2rem;
+            bottom: 40px;
+            width: 70%;
+        }
+
+        .heading {
+            font-size: 2rem;
+            line-height: 3rem;
+        }
+        .paragraph,
+        .sub-heading {
+            font-size: 1.4rem;
+            line-height: 2rem;
+        }
+    }
+
+    @include mixins.screen(sm) {
+    }
 }
 
 .section-3-practice {
     background-color: #017848;
-    display: flex;
     margin-top: 150px;
+    display: flex;
     .box-area {
         display: flex;
         flex-direction: column;
@@ -155,5 +262,42 @@
         text-decoration: none;
         padding: 15px 35px;
         background-color: #fd6038;
+    }
+
+    // responsive
+    @include mixins.screen(xl) {
+    }
+
+    @include mixins.screen(lg) {
+        .heading {
+            font-size: 3.5rem;
+        }
+
+        .sub-heading,
+        .paragraph {
+            font-size: 1.6rem;
+        }
+
+        .box-area {
+            gap: 13px;
+        }
+    }
+
+    @include mixins.screen(md) {
+        .heading {
+            font-size: 3rem;
+        }
+
+        .sub-heading,
+        .paragraph {
+            font-size: 1.4rem;
+        }
+
+        .box-area {
+            gap: 5px;
+        }
+    }
+
+    @include mixins.screen(sm) {
     }
 }
