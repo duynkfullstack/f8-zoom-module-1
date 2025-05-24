@@ -1,3 +1,5 @@
+@use "/scss/_mixins.scss";
+
 .main-blog {
     .box-area {
         margin-top: 70px;
@@ -5,6 +7,7 @@
 
     .heading {
         max-width: 570px;
+        font-size: 6rem;
     }
 
     .paragraph {
@@ -24,6 +27,10 @@
         justify-content: center;
 
         align-items: center;
+    }
+
+    .image {
+        max-width: 100%;
     }
 
     .card-heading {
@@ -54,5 +61,57 @@
         background-color: var(--orange);
         text-decoration: none;
         text-align: center;
+    }
+
+    @include mixins.screen(xl) {
+    }
+    @include mixins.screen(lg) {
+        .heading {
+            font-size: 5rem;
+            line-height: 6rem;
+        }
+
+        .paragraph {
+            font-size: 1.5rem;
+        }
+    }
+    @include mixins.screen(md) {
+        .heading {
+            font-size: 4rem;
+            line-height: 4.5rem;
+        }
+
+        .paragraph {
+            font-size: 1.5rem;
+        }
+
+        .card-heading {
+            font-size: 1.6rem;
+            line-height: 2.5rem;
+        }
+
+        .date {
+            font-size: 1.4rem;
+            line-height: 2rem;
+        }
+    }
+    @include mixins.screen(sm) {
+        .heading {
+            font-size: 3rem;
+            line-height: 3.4rem;
+        }
+
+        .paragraph {
+            font-size: 1.5rem;
+        }
+        .card-heading {
+            font-size: 1.5rem;
+            line-height: 2.2rem;
+        }
+
+        .date {
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+        }
     }
 }

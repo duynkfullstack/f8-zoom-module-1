@@ -85,6 +85,60 @@
     }
     .inner {
         text-align: center;
+        position: relative;
+
+        width: 100%;
+        // height: 100%;
+    }
+
+    .inner .play {
+        max-width: 100%;
+        position: absolute;
+        top: -85px;
+        left: -20px;
+        z-index: 100;
+    }
+
+    .inner .block-yellow {
+        position: absolute;
+        top: 0;
+        left: 54px;
+        width: 30%;
+        height: 100%;
+        background-color: var(--yellow);
+        z-index: 0;
+    }
+
+    .inner .block-green {
+        position: absolute;
+        top: 0;
+        right: 54px;
+        z-index: 0;
+        width: 30%;
+        height: 100%;
+        background-color: var(--green);
+    }
+
+    .inner .mask-group {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -10px;
+        z-index: 3;
+    }
+
+    .image {
+        position: relative;
+        z-index: 2;
+    }
+
+    @include mixins.screen(xxl) {
+        .inner .block-yellow {
+            left: 54px;
+        }
+        .inner .block-green {
+            right: 54px;
+        }
     }
     @include mixins.screen(xl) {
         .left-section-1 h1 {
@@ -99,6 +153,21 @@
             font-size: 1.6rem;
             padding: 15px 30px;
         }
+
+        .inner .play {
+            top: -90px;
+            left: -55px;
+        }
+        .inner .block-yellow {
+            left: 30px;
+        }
+        .inner .block-green {
+            right: 30px;
+        }
+
+        .inner .mask-group {
+            right: -40px;
+        }
     }
 
     @include mixins.screen(lg) {
@@ -112,6 +181,21 @@
             font-size: 1.5rem;
             padding: 15px 28px;
         }
+
+        .inner .play {
+            width: 40%;
+        }
+        .inner .block-yellow {
+            left: -20px;
+        }
+        .inner .block-green {
+            right: -20px;
+        }
+
+        .inner .mask-group {
+            right: -75px;
+            width: 40%;
+        }
     }
 
     @include mixins.screen(md) {
@@ -119,6 +203,23 @@
             margin-top: 84px;
             margin-bottom: 30px;
             text-align: center;
+        }
+
+        .inner .play {
+            width: 30%;
+            top: -75px;
+            left: -29px;
+        }
+        .inner .block-yellow {
+            left: 25px;
+        }
+        .inner .block-green {
+            right: 25px;
+        }
+
+        .inner .mask-group {
+            right: -20px;
+            width: 20%;
         }
     }
 
@@ -443,6 +544,10 @@
     background-color: #fff;
 
     .container {
+        margin-top: 150px;
+    }
+
+    .section-bottom {
         margin-top: 150px;
     }
     .sub-heading {
@@ -986,13 +1091,13 @@
         border: 1px solid;
     }
 
-    .box:hover .icon {
+    .box:active .icon {
         background-color: var(--orange);
         rotate: 180deg;
         top: 18.5px;
     }
 
-    .box:hover ~ p {
+    .box:active ~ p {
         display: block;
     }
 

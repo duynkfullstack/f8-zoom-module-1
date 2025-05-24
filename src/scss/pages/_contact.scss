@@ -60,7 +60,7 @@
         align-items: center;
     }
 
-    .btn a {
+    button {
         padding: 15px 20px;
         text-decoration: none;
         font-family: var(--paragraph-font);
@@ -91,7 +91,7 @@
             line-height: 2.5rem;
         }
 
-        .btn a {
+        button {
             padding: 12px 15px;
         }
     }
